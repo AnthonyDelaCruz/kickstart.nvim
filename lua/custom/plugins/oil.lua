@@ -18,7 +18,7 @@ return {
     require('oil').setup {
       view_options = {
         show_hidden = true,
-        is_always_hidden = function(name, bufnr)
+        is_always_hidden = function(name)
           -- Check if it's a dotfile
           if name:sub(1, 1) == '.' then
             -- Hide it if it's NOT in the allowed list
