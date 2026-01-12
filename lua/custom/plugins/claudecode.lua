@@ -2,15 +2,13 @@ return {
   'coder/claudecode.nvim',
   dependencies = { 'folke/snacks.nvim' },
   opts = {
-    -- Use floating window for Claude Code display
+    -- Use right split for Claude Code display (ergonomic for diff review)
     terminal = {
       provider = 'auto', -- Use snacks.nvim for terminal management
       snacks_win_opts = {
-        position = 'float', -- Floating window instead of split
-        width = 0.95, -- 95% of screen width
-        height = 0.95, -- 95% of screen height
+        position = 'right', -- Right split for side-by-side view
+        width = 0.35, -- 35% for Claude, 65% for code
         border = 'rounded', -- Rounded borders
-        backdrop = 80, -- Dim background when floating
       },
     },
   },
